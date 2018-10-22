@@ -4,9 +4,11 @@ To make a system to give information about:
 - their average duration of stay in the parking lot for a given day, month, year, for any timeframe
 - the number (and license plate number) of all cars currently in the parking lot
 
+
 ## Overview:
 The _raspberry_ is going to serve as the front-end for the project. It will broadcast a live video feed over an RTSP connection.
 A _server_ is going to be the back-end of the project. It will do the recognition of the license plate, and fill in the database given the video feed captured by the _raspberry_
+
 
 ## Steps:
 - _raspberry_ captures the feed over an RTSP connection @ entrance
