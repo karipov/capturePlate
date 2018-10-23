@@ -36,13 +36,13 @@ class Camera(Window):
         cam = cv2.VideoCapture(0)
 
         while True:
-            ret_val, img = cam.read()
-            img = cv2.resize(img, (self.width, self.height))
+            ret_val, frame = cam.read()
+            frame = cv2.resize(frame, (self.width, self.height))
 
             if mirror:
-                img = cv2.flip(img, 1)
+                frame = cv2.flip(frame, 1)
 
-            cv2.imshow(self.name, img)
+            cv2.imshow(self.name, frame)
             cv2.startWindowThread()
             cv2.namedWindow(self.name, cv2.WINDOW_NORMAL)
 
@@ -51,7 +51,3 @@ class Camera(Window):
 
         cam.release()
         cv2.destroyAllWindows()
-
-
-camera = Camera(width=800, height=533)
-camera.show_feed(mirror=True)
