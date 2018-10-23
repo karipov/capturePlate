@@ -33,7 +33,7 @@ class Camera(Window):
     def show_feed(self, mirror: bool = False):
         """ Displays a window with live camera feed
         """
-        cam = cv2.VideoCapture(0)
+        cam = cv2.VideoCapture("http://192.168.1.156:8081")
 
         while True:
             ret_val, frame = cam.read()

@@ -8,6 +8,8 @@
 
 from source import Window, Camera
 
+RPI_IP_ADDR = "192.168.1.156"
+RPI_PORT = "8081"
 
 camera = Camera(width=400, height=267) # original: 800, 533
 camera.show_feed()
