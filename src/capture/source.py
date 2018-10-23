@@ -8,6 +8,7 @@
 
 import cv2
 
+
 class Window():
     def __init__(self, width: int, height: int, name: str = "window"):
         self.width = width
@@ -15,6 +16,8 @@ class Window():
         self.name = name
 
     def resolution(self) -> (int):
+        """ Returns number of pixels
+        """
         return self.width * self.height
 
     def tuple_params(self, width_first: bool = True) -> (int, int):
@@ -30,12 +33,12 @@ class Camera(Window):
     def __init__(self, width: int, height: int, name: str = "window"):
         super().__init__(width, height, name)
 
-    def show_feed(self, mirror: bool = False):
+    def show_feed(self, source: any = 0, mirror: bool = False):
         """ Displays a window with live camera feed
         """
-        cam = cv2.VideoCapture("http://192.168.1.156:8081")
+        cam = cv2.VideoCapture(source)
 
-        while True:
+        while cam.isOpened():
             ret_val, frame = cam.read()
             frame = cv2.resize(frame, (self.width, self.height))
 
