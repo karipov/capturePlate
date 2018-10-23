@@ -7,9 +7,9 @@
 #
 
 from source import Window, Camera
+from unwrap import Unwrap
 
-RPI_IP_ADDR = "192.168.1.156"
-RPI_PORT = "8081"
 
+config = Unwrap()
 camera = Camera(width=400, height=267) # original: 800, 533
-camera.show_feed()
+camera.show_feed(source=config.url)
