@@ -30,8 +30,23 @@ class Window():
 
 
 class Camera(Window):
-    def __init__(self, width: int, height: int, name: str = "window"):
+    def __init__(self,
+                 width: int,
+                 height: int,
+                 source: str = 0,
+                 name: str = "window"):
+
         super().__init__(width, height, name)
+        self.view = self._setup_feed(source=source)
+
+    def _setup_feed(self,
+                   source: any = 0,
+                   mirror: bool = False):
+        """ Returns the cv2 camera object
+        """
+
+        cam = cv2.VideoCapture(source)
+        return cam
 
     def show_feed(self, source: any = 0, mirror: bool = False):
         """ Displays a window with live camera feed
