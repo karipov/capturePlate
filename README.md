@@ -1,6 +1,7 @@
 # capturePlate
 Project _capturePlate_ is an ALPR system used for keeping track of parked vehicles.
 
+
 ## Prerequisites
 Make sure you have all the proper libraries installed with the following command
 ```
@@ -18,4 +19,4 @@ python -m src.recognize.face
 ```
 
 ## Notice
-Project _capturePlate_ is still in it's alpha stage
+Project _capturePlate_ is still in its alpha stage. ALPHA = FEATURES MAY NOT WORK.
