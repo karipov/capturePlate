@@ -1,7 +1,7 @@
 # capturePlate
 Project _capturePlate_ is an ALPR system used for keeping track of parked vehicles.
 
-## Prerequisites
+## Prerequisites
 Make sure you have all the proper libraries installed with the following command
 ```
 pip3 install -r requirements.txt
