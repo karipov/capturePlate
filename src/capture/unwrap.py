@@ -6,8 +6,8 @@
 #  Copyright © 2018 Komron. All rights reserved.
 #
 
-from json import load
 from os.path import dirname, join
+from json import load
 
 
 class Unwrap():
@@ -18,10 +18,10 @@ class Unwrap():
         self.file_name = file_name
         self.path = join(self.directory, self.file_name)
 
-        self.values = self._unload()
-        self.url = "{0}://{1}:{2}".format(self.values[mode]["PROTOCOL"],
-                                          self.values[mode]["IP"],
-                                          self.values[mode]["PORT"])
+        self.values = self._unload()[mode]
+        self.url = "{0}://{1}:{2}".format(self.values["PROTOCOL"],
+                                          self.values["IP"],
+                                          self.values["PORT"])
 
     def _unload(self, mode: str = "r") -> (dict):
         """ Unpacks the contents of the config file
