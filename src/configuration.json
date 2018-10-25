@@ -2,6 +2,7 @@
   "HOME": {
     "PROTOCOL": "http",
     "IP": "192.168.1.156",
-    "PORT": "8081"
+    "PORT": "8081",
+    "RESOLUTION": [640, 480]
   }
 }
