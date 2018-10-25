@@ -6,15 +6,18 @@
 #  Copyright © 2018 Komron. All rights reserved.
 #
 
-import cv2
 from ..capture.source import Window, Camera
 from ..capture.unwrap import Unwrap
+
+import cv2
 
 # original camera resolution
 # camera = Camera(width=400, height=267)
 
 config = Unwrap(mode="HOME")
-camera = Camera(width=640, height=480, source=config.url)
+camera = Camera(width=config.values["RESOLUTION"][0],
+                height=config.values["RESOLUTION"][1],
+                source=config.url)
 
 while camera.view.isOpened():
     ret_val, frame = camera.view.read()
