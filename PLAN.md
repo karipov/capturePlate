@@ -21,7 +21,7 @@ A _server_ is going to be the back-end of the project. It will do the recognitio
   3. OpenCV does some image processing (i.e. thresholding, dilution, erosion)
   4. OpenCV saves the file to a destination folder for PyTesseract
   5. possibly using PIL, the image is read as soon as it's added to the destination folder
-  6. PyTesseract is used to recognize the characters, and the values are returned
+  6. PyTesseract is used to recognise the characters, and the values are returned
 
 4. _server_ enters the plate data into a database along with time (possibly a snapshot of the plate)
 
